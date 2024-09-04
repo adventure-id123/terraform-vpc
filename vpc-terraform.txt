@@ -8,7 +8,7 @@ provider "aws" {
   secret_key = "sec-key"
 }
 
-vi data.sh
+vi demo.sh
 
 #!/bin/bash
 
@@ -52,7 +52,7 @@ resource "aws_instance" "example-1" {
     Name = "task_1"
   }
   security_groups = [aws_security_group.example_sg.name]
-  user_data       = file("data.sh")
+  user_data       = file("demo.sh")
 
 
 public & private ip
